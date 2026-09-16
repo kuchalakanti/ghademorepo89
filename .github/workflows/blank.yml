@@ -1,9 +1,17 @@
 name: job
 on: workflow_dispatch
 jobs:
-  echo:
-   runs-on: ubuntu-latest
-   steps:
-     - run: |
-             echo "hello world"
-             echo "this is githubactions"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello this is build"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello this is test"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello this is deploy"
+      
+
